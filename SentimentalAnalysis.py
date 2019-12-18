@@ -6,7 +6,7 @@ def prediction(xtest):
     pickle_in = open(pickleModel, "rb")
     loadData = pickle.load(pickle_in)
     predicedProb = loadData.predict_proba([xtest])[:,1]
-    return predicedProb
+    return predicedProb[0]
             
 class Sentimental:
     def __init__(self, xtest):
